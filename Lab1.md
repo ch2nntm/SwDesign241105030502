@@ -1,5 +1,26 @@
 Kết quả bài thực hành Lab1:
 --
+1. Phân tích kiến trúc:
+- Kiến trúc: Layer (bao gồm: Application & Business Services)
+  + Application: Lớp Application chứa các thành phần thiết kế dành riêng cho ứng dụng.
+  + Business Services: Lớp Business Services chứa các thành phần dành riêng cho doanh nghiệp được sử dụng trong nhiều ứng dụng.
+- Biểu đồ package mô tả kiến trúc:
+![Diagram](https://www.planttext.com/api/plantuml/png/UhzxlqDnIM9HIMbk3bTnTcQUGb5-SIeNLq5YSdPYUgg2acD1GKvcSc99PdwUaeADJKvYPMgHdPq2aWgdqkBClDJYOeNWrAAopEJKObHrg2RewTbXqy75nUMGcfS2T0G0003__mC0)
+
+2.Cơ chế phân tích:
+- BankSystem: Hệ thống bên ngoài mà tất cả các giao dịch gửi tiền trực tiếp được gửi đến.
+  + Cơ chế phân tích: Legacy Interface 
+- Employee: Nhân viên được trả lương theo giờ.
+  + Cơ chế phân tích: Persistence, Security  
+- Paycheck: Bản ghi về số tiền mà nhân viên được trả cho một kỳ trả lương nhất định.
+  + Cơ chế phân tích: Persistence, Security  
+- ProjectManagementDatabase: Cơ sở dữ liệu cũ chứa thông tin liên quan đến các dự án và số hiệu phí.
+  + Cơ chế phân tích: Legacy Interface 
+- PurchaseOrder: Bản ghi về một giao dịch bán hàng do nhân viên thực hiện.
+  + Cơ chế phân tích: Persistence, Security 
+- Timecard: Thẻ chấm công chứa thông tin về số giờ làm việc của nhân viên trong một khoảng thời gian nhất định.
+  + Cơ chế phân tích: Persistence, Security 
+
 3. Phân tích ca sử dụng Select Payment:
 - Các lớp phân tích:
   + boundary: PaymentForm
