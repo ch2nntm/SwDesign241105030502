@@ -1,4 +1,5 @@
 Kết quả bài thực hành Lab1:
+--
 #3. Phân tích ca sử dụng Select Payment:
 - Các lớp phân tích:
   + boundary: PaymentForm
