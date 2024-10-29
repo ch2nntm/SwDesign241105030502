@@ -43,7 +43,7 @@ Kết quả bài thực hành Lab1:
     + Liên kết với PaymentMethod để lưu trữ thông tin về phương thức thanh toán hiện tại của nhân viên.
     + Tương tác với PaymentController để cập nhật lựa chọn thanh toán.
 - Biểu đồ lớp:
-  ![Diagram](https://www.planttext.com/api/plantuml/png/R59BRiCW4Drp2fRjmXV8AbBLIbaqhU8JZ67Se023O5XOLK_MHO_KAnJ7ABRZikEzWVU1t--VVMA8d9qLwMAyZ9HG26KX9VaEWqFFBnIT_1Ioh8GM5QEkp2locVHEjXoD_xXEWDOHKrfX7VZB4Hok1vMYxFcONOTnmJJDbTOc1Gj35NeBRCYdXyV9HUwSuVRgfS05_Rgp_4IU8rcBiHfND-1G_1hFirA8f8hZLQJbtUDC3XeOwyZ1zxJKV7R1qe1OfR1kPw4PsxRmJrsXPXWlDxrHC1gvApHX2nRYi9Ez9U2QqJbJZf0_5RDBvamvsc6DrlIhP5FuAPjOldxJR8iLMwXfRcK8iKUloxVw0m00__y30000)
+  ![Diagram](https://www.planttext.com/api/plantuml/png/R98nRWCX44LxJa6P57i1LvOYHt8H9_AUO1PcOsHW4CmMACh9KkH8kKBONOh5DkMVpyoR3ty_l_l447boLgIhyJ9IGYc4if2I_83iqFChHIU_X2mdeKN5g6lb3Vb2UYTxZiP_BWxGEc9AZJQ0lvx0OMjKYYRFfyaD63ULhblAsgHW8TT1xu4D-VJql59CWpFSBon5Bkht3V8BUOvaBSOA7YAfWjLmRnlCdYbeOAoMenzfs_ZWWgMCUF1iEDUkMCLZoS1uRhJxXHya4ohkFCACHi6CSvDTmXuinBoJeoLOXoXopfGhvCy5ULkvq1HjRjKQQRFV6i6weTW-TDSz257SIyNNPYB47hqkF-aV003__mC0)
 
 - Giải thích:
   + PaymentForm: Lớp giao diện người dùng để nhân viên lựa chọn phương thức thanh toán. Nó chứa các thuộc tính để lưu trữ thông tin lựa chọn và các phương thức để hiển thị tùy chọn và gửi lựa chọn.
