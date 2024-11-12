@@ -307,3 +307,11 @@
    ![Diagram](https://www.planttext.com/api/plantuml/png/Z5JBReCm4BpxAtni3_c1g8gYf8zBMaKDwjrrje1YlDHU7r3LB-kXdzHVg0qc0G9HBaIUNMPcrqF-VdwNbeGXLoXc3xdc1Yqm9fMmbcz5PL2fHpG5_sASppWKfS8AO9DRclFml7k8qA9kA9jNxWN1d8UdHpatyEd0KkHxTVhcbdqFLDQeAVo26MZPAI6PWJp4uZOU5usUqv7L2mL02YMTydOy7A5CwBqAvm8qFGDbk8-Lqg04QsEfPzNaci1q5dBHHXdQMsY4Pp3oXHTMGXzsbIKepjP4HcWh9EMeeudaX3G-f04_Uk3ebEAm5lG-mHF_k6fduYlqQiwUqf6olSH8LeYNjpdVaPyxRTX13n3bKAVhuD072jsxWcRncLkBiWSLJcv2Sv81FkNOgN6U0ks44gQzVNzUWOQFdEmWY_NkepsBIGvzNPsAAl7PoHAi7RKHJpsRQGBMtbulU0cIK4twl5htovhD5YFV03k7GkDnVnFrLdwgF0pUHDzOtjXvQZkKOHGs6jC-NzrtdA9hcREbpqtu8_e7003__mC0)
    
  ## 2.Viết code Java mô phỏng ca sử dụng Maintain Timecard:
+```
+public class EmployeeEntity {}
+```
+
+
+
+
+ 
