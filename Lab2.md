@@ -197,11 +197,51 @@
    
    ### 1.5.Maintain Employee Info:
    #### - Các lớp phân tích:
+    +) Boundary: MaintianEmployeeInfoForm
+    +) Control: MaintainEmployeeInfoController
+    +) Entity: Employee
    #### - Biểu đồ tuần tự:
+   ![Diagram](https://www.planttext.com/api/plantuml/png/l5H1IiD05DtFAVvI8Ng0BgGbHkb2ATX5jsCQpM0oKoQJOfRYIaImQpUj8c9141I4PE4YfVUO4tW5_wHLessb81Z8JFXvxx__teIyPQ_LI56fuZ0WqH7Z84Na4Ueg8Q514oc2eDOE6MUHajGKQGID6jaNCMzJcS0EPLpXxOITG2IUL-S7Oal8qE1sdFeMSGLNs6Kkq9wy2pmvXTl4uugf13vGfkuGqgZ1saRHhmAshxCB3YvkzoxmqIa_X9Mcdmz32soTFdI0-xWf2rhv4rqbXZLbsnNOrja3WoGVnk3gz2u6PPX8oQyvT5a-v8JGG47Ha01UXlUblkiN4iXwHbs5WPMfKtn9puuHXagtYpWuEwuMZ7ewEwU5hJCB8ftrO6zlruBkUdTzzTiWJWMQEXq827LsnMRqdI_nLZvm9sdmEJvdpOqkTVgYeEEF7yS3C-eauyCYCyLqTeBSl0zAwlG60Xo2bLtXOv_xu9e27cHxacJvJ1O7Mj_yQv0_Cohh_aPPa9Vx-zZD-H6CUldDT-fd3kPh_4__HczPiyVpi4iPBfYp1r_55Nyfxm000F__0m00)
    #### - Thuộc tính và phương thức của các lớp:
+    MaintainEmployeeInfoForm (Boundary)
+      - Thuộc tính:
+        employeeName: Tên của nhân viên.
+        employeeAddress: Địa chỉ của nhân viên.
+        employeeSSN: Số an sinh xã hội của nhân viên.
+        employeePhoneNumber: Số điện thoại của nhân viên.
+        employeeSalary: Lương của nhân viên.
+      - Phương thức:
+        displayForm(): Hiển thị biểu mẫu để nhập thông tin nhân viên.
+        getInputData(): Lấy dữ liệu đầu vào từ quản trị viên (như tên, địa chỉ, số điện thoại...).
+        showConfirmation(): Hiển thị thông báo xác nhận thao tác (thêm, cập nhật, xóa).
+    MaintainEmployeeInfoController (Control)
+      - Thuộc tính:
+        actionType: Loại hành động (Thêm, Cập nhật, Xóa).
+        employee: Thông tin nhân viên hiện tại đang được xử lý.
+      - Phương thức:
+        handleAddEmployee(): Xử lý thêm nhân viên mới.
+        handleUpdateEmployee(): Xử lý cập nhật thông tin nhân viên.
+        handleDeleteEmployee(): Xử lý xóa nhân viên.
+        validateEmployeeData(): Xác minh dữ liệu nhân viên hợp lệ trước khi thêm hoặc cập nhật.
+        performAction(): Thực hiện hành động được chọn (thêm, cập nhật, xóa).
+    Employee (Entity)
+      - Thuộc tính:
+        employeeID: Mã định danh duy nhất của nhân viên.
+        employeeName: Tên của nhân viên.
+        employeeType: Loại nhân viên (theo giờ, lương cứng, có hoa hồng).
+        salary: Mức lương của nhân viên.
+        phoneNumber: Số điện thoại của nhân viên.
+        address: Địa chỉ của nhân viên.
+      - Phương thức:
+        addEmployee(): Thêm nhân viên vào cơ sở dữ liệu.
+        updateEmployee(): Cập nhật thông tin nhân viên.
+        deleteEmployee(): Xóa nhân viên khỏi cơ sở dữ liệu.
+        validateEmployeeInfo(): Kiểm tra tính hợp lệ của thông tin nhân viên.
    #### - Mối quan hệ giữa các lớp phân tích:
+    MaintainEmployeeInfoForm gọi MaintainEmployeeInfoController để xử lý các thao tác.
+    MaintainEmployeeInfoController tương tác với Employee để thực hiện các thao tác thêm, cập nhật hoặc xóa thông tin nhân viên.
    #### - Biểu đồ lớp:
-   
+   ![Diagram](https://www.planttext.com/api/plantuml/png/Z9DDJeH048NtdAAMkk02BCnCH1CM4XFq03LqCNJiltGt6c8ycGkFv1Li40n2Zyw2pNlzeBvwpUVxnyvvjBwJ8d5FN87LZfAa5kWSt25NFZmtqWZT4nMgqRVQIdXD05AWIIvHKWQLjrmTVnbxnYmv5_MggepgzwrML7RoG3QUGu6spo3NtK5Gi00OTqPWFqnsSJagH_A5CftFqUCakLQ_N6lLS2lHSws2_FONPpZhhHQ2x4IBzH1xw4sSDOCvFNwkHSN4i81PdSRurXyDGqzHAoT16-iP1Lyc5bo6R1F0z_KQQZwxAgl8e-EVx703xDO5f61ET8QR_c7GLd1TR1did3KCFOt89ozgcbxzrsuqlF27L_nKkoF5mg_o1G00__y30000)
    ### 1.6.Run Payroll:
    #### - Các lớp phân tích:
    #### - Biểu đồ tuần tự:
