@@ -242,11 +242,68 @@
     MaintainEmployeeInfoController tương tác với Employee để thực hiện các thao tác thêm, cập nhật hoặc xóa thông tin nhân viên.
    #### - Biểu đồ lớp:
    ![Diagram](https://www.planttext.com/api/plantuml/png/Z9DDJeH048NtdAAMkk02BCnCH1CM4XFq03LqCNJiltGt6c8ycGkFv1Li40n2Zyw2pNlzeBvwpUVxnyvvjBwJ8d5FN87LZfAa5kWSt25NFZmtqWZT4nMgqRVQIdXD05AWIIvHKWQLjrmTVnbxnYmv5_MggepgzwrML7RoG3QUGu6spo3NtK5Gi00OTqPWFqnsSJagH_A5CftFqUCakLQ_N6lLS2lHSws2_FONPpZhhHQ2x4IBzH1xw4sSDOCvFNwkHSN4i81PdSRurXyDGqzHAoT16-iP1Lyc5bo6R1F0z_KQQZwxAgl8e-EVx703xDO5f61ET8QR_c7GLd1TR1did3KCFOt89ozgcbxzrsuqlF27L_nKkoF5mg_o1G00__y30000)
+   
    ### 1.6.Run Payroll:
    #### - Các lớp phân tích:
+    +) Boundary: PayrollForm, PrinterForm, BankSystemForm
+    +)Control: PayrollController, PrinterController, BankSystemController
+    +)Entity: Employee, PayCheck
    #### - Biểu đồ tuần tự:
+   ![Diagram](https://www.planttext.com/api/plantuml/png/X5EnJjqm5Dtz5LVi_G66YXQL2i50LPQE9Z7Frakk8yUfb9cndy12MbLL4KZjcWmCblWFVm6_mBMJvvUy8fh1YNtFEJu-ldaQ7WvgourjoeBLQuLWT2s0CPvPRM3lZBT65mMyoqk5ghQ6q_8Uy1fuM64Nki6ScpOXZxGfO_sIFbYcqT9ggXwEyqAC6bcQpf16eHLc1rbDgzOKM-XxZklFRMr5kOE-e4A4pkoD0idU93X3RDKIAEY42HDebINCXx8gT2j4h8goIWKwNoP5jXwrfmcb64A2DszZ6h0FNznj0vdlVz4eVT-r0Hi31XOX1Ds6yX_23BXBE_NzpnPoZX9grsKIKBhl25-LkyKeXs2Dxtz0yVZdiSFLgsBdxfvqh7OT9lohX1FbXwkITk1GoObWfHz-P_JYIIjqMM7XK3OjuH7MKfEbw6puIr3b-uUA0JtBlJQt6wnH91fMYcl8_V0j77GL3YhTJJGPo0a-KO_6g_ZeXtkre5e_N2jOjW5f2Cn7eyT8nmcccaqCBvYRDUho-jG_xCdVdB4L8F8B-qKlomt75jk7JuthA3ftH_bkUaHgoe4ofr42Eo0s_URF0000__y30000)
    #### - Thuộc tính và phương thức của các lớp:
+    PayrollForm: (Boundary)
+      - Thuộc tính:
+        employeeList[]: Danh sách nhân viên cần thanh toán.
+        payrollDate: Ngày chạy payroll.
+      - Phương thức:
+        requestPayrollRun(): Gửi yêu cầu chạy payroll cho hệ thống.
+    PrinterForm: (Boundary)
+      - Thuộc tính:
+        paycheck[]: Danh sách phiếu lương cần in.
+      - Phương thức:
+        requestPrint(): Gửi yêu cầu in phiếu lương.
+    BankSystemForm: (Boundary)
+      - Thuộc tính:
+        transaction[]: Danh sách các giao dịch ngân hàng cần gửi.
+      - Phương thức:
+        sendTransaction(): Gửi giao dịch đến hệ thống ngân hàng.
+    PayrollController: (Control)
+      - Phương thức:
+        runPayroll(): Quá trình chạy payroll cho tất cả nhân viên.
+        calculatePay(): Tính toán tiền lương cho mỗi nhân viên.
+        handlePaymentMethod(): Xử lý phương thức thanh toán (mail, pick-up, direct deposit).
+    PrinterController: (Control)
+      - Phương thức:
+        printPaycheck(): Xử lý việc in phiếu lương.
+        checkPrinterStatus(): Kiểm tra tình trạng máy in.
+    BankSystemController: (Control)
+      - Phương thức:
+        createBankTransaction(): Tạo giao dịch ngân hàng.
+        sendToBankSystem(): Gửi giao dịch đến hệ thống ngân hàng.
+    Employee: (Entity)
+      - Thuộc tính:
+        maNV: Mã nhân viên.
+        tenNV: Tên nhân viên.
+        luongCoBan: Lương cơ bản.
+        phuCap: Phụ cấp.
+        mucLuongTheoGio: Lương theo giờ.
+      - Phương thức:
+        getSalary(): Trả về lương cơ bản của nhân viên.
+        getBenefits(): Trả về các phụ cấp và quyền lợi của nhân viên.
+    Paycheck: (Entity)
+      - Thuộc tính:
+        soTien: Số tiền thanh toán cho nhân viên.
+        ngayThanhToan: Ngày thanh toán.
+      - Phương thức:
+        generatePaycheck(): Tạo phiếu lương cho nhân viên.
+        calculateTotalPay(): Tính tổng số tiền phải trả.
    #### - Mối quan hệ giữa các lớp phân tích:
+    PayrollController có mối quan hệ với PayrollForm (gửi yêu cầu chạy payroll) và Employee (lấy thông tin nhân viên để tính toán lương).
+    PayrollController cũng có mối quan hệ với BankSystemController và PrinterController để xử lý phương thức thanh toán.
+    PrinterController có mối quan hệ với PrinterForm để in phiếu lương khi cần thiết.
+    BankSystemController có mối quan hệ với BankSystemForm để gửi giao dịch chuyển khoản.
+    Paycheck được tạo ra trong PayrollController và sẽ được gửi đến PrinterController hoặc BankSystemController tùy theo phương thức thanh toán.
    #### - Biểu đồ lớp:
+   ![Diagram](https://www.planttext.com/api/plantuml/png/Z5JBReCm4BpxAtni3_c1g8gYf8zBMaKDwjrrje1YlDHU7r3LB-kXdzHVg0qc0G9HBaIUNMPcrqF-VdwNbeGXLoXc3xdc1Yqm9fMmbcz5PL2fHpG5_sASppWKfS8AO9DRclFml7k8qA9kA9jNxWN1d8UdHpatyEd0KkHxTVhcbdqFLDQeAVo26MZPAI6PWJp4uZOU5usUqv7L2mL02YMTydOy7A5CwBqAvm8qFGDbk8-Lqg04QsEfPzNaci1q5dBHHXdQMsY4Pp3oXHTMGXzsbIKepjP4HcWh9EMeeudaX3G-f04_Uk3ebEAm5lG-mHF_k6fduYlqQiwUqf6olSH8LeYNjpdVaPyxRTX13n3bKAVhuD072jsxWcRncLkBiWSLJcv2Sv81FkNOgN6U0ks44gQzVNzUWOQFdEmWY_NkepsBIGvzNPsAAl7PoHAi7RKHJpsRQGBMtbulU0cIK4twl5htovhD5YFV03k7GkDnVnFrLdwgF0pUHDzOtjXvQZkKOHGs6jC-NzrtdA9hcREbpqtu8_e7003__mC0)
    
  ## 2.Viết code Java mô phỏng ca sử dụng Maintain Timecard:
