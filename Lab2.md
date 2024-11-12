@@ -155,10 +155,45 @@
    ![Diagram](https://www.planttext.com/api/plantuml/png/n5HHJiCm3FtlAVAvIUm24ve65AH9e4s22sIDDoAIkB8Jf0bnCZuu4bSWwRf1IXcm7oerKcs_P_lPwTlBwvIz91-iAVX1Eq7888gYCf9Pt4ZjV7mNWQfxoJ0d1NI5PCLJ8U8p4bLWZnRe0cDWvSVYrfDswuxtJ2a2vewt9bIXyjUQ8owTfukjPT86O4fNIWzZaSx6AiGQ_CpLmKUJ70p78YkkZL6QQoCtZQc4s8BXGSFM2H-syHMwbIPRWW6lqINQSqG3qXNF1yL8VHCQ0zHA4ha8Oh6Dzs3EKAiyRbRk13ffdMf-0AzIiVtuuOTK_VwkQlicC_D-oXtuVyq-agArcZcE2DIbhGrk0BxK5HVQXpoX49gRbkOrPDFTEfTWqAtv3dUS0_X2thSIcLff7vVnOxy8B1-FMOFZnxtIJlrstjzVxT5eyjEkzwC_tON4aMVyCs8dPp45f-BlwHq00F__0m00)
    ### 1.4.Create Administrative Report:
    #### - Các lớp phân tích:
+    +) Boundary: CreateAdministrativeReportForm
+    +) Control: CreateAdministrativeReportController
+    +) Entity: AdministrativeReport
    #### - Biểu đồ tuần tự:
+   ![Diagram](https://www.planttext.com/api/plantuml/png/j9F1Qi9048Rl-nHpLB0luA4O0j93AH9wiCSO5xEuxfRDHCYnz2Yb-0PQ4K6Gzj1JGkbXIzzZdw2lqDse6AdjhJc4CFbd_c_-JRwAzrQ2eS9qn4aoP0AKJ2W98vGAEc6c9ETUVyG4Ir25hXWcqF58JwQY7weCV4L3f1K96zE0tag5RQb6JkrxGPj4Kg2TzOVStoeuLRicdr2133CufNOQBo2auy7PUMdHX1kzJY4o-Ig5dfvBYDojngN9v-nGQO0Ow5a6FPC_8tnCdNvV6vhy7G5ZdKSDGBqM86Bz963Cx7ETE1jdr_6QS1MRV7CBo4hJM6yE3aTGVYe63chvYtO_qotSX6lBAl-FtZzmNIkJBs1iYhkJ-HxjUi5CSI_iP5DCAd0VKxq0TCGav6YLTZTJF0ZWdo-L8o1WhseabqUleUPG6mvb0gZqfbusxFszODTGEuLPQTkkl6tsWeDRLyyZ6uGzhIqOeJoXZcSOwrTxDcNjX-CkTbCydZR-syV6iChARliDzu-ox9fY0ro_LGA8fPu95-GIISlgtQ_u3G00__y30000)
    #### - Thuộc tính và phương thức của các lớp:
+    CreateAdministrativeReportForm: (Boundary)
+      - Thuộc tính:
+        reportType: Loại báo cáo cần tạo (e.g., "Total Hours Worked", "Pay Year-to-Date").
+        startDate, endDate: Khoảng thời gian báo cáo.
+        employeeName: Tên nhân viên (nếu cần lọc theo nhân viên).
+      - Phương thức:
+        enterReportCriteria(): Cho phép Payroll Administrator nhập tiêu chí báo cáo.
+        submitReportRequest(): Gửi yêu cầu tạo báo cáo.
+        displayGeneratedReport(): Hiển thị báo cáo đã tạo.
+        saveReport(): Lưu báo cáo với tên và vị trí chỉ định.
+        discardReport(): Hủy bỏ báo cáo đã tạo.
+    CreateAdministrativeReportController: (Control)
+      - Phương thức:
+        createReport(): Tạo báo cáo dựa trên các tiêu chí đã cung cấp và trả về một đối tượng AdministrativeReport.
+        validateCriteria(): Xác thực tiêu chí báo cáo trước khi tạo.
+    AdministrativeReport: (Entity)
+      - Thuộc tính:
+        id: Mã định danh báo cáo.
+        reportContent: Nội dung báo cáo.
+        generatedDate: Ngày tạo báo cáo.
+        reportType: Loại báo cáo.
+        startDate, endDate: Khoảng thời gian báo cáo.
+        employeeName: Tên nhân viên (nếu có).
+      - Phương thức:
+        save(): Lưu báo cáo vào vị trí chỉ định.
+        discard(): Hủy bỏ báo cáo.
+        generateContent(): Tạo nội dung cho báo cáo dựa trên các tiêu chí.
    #### - Mối quan hệ giữa các lớp phân tích:
+    CreateAdministrativeReportForm là lớp trung gian nhận và gửi thông tin, giao tiếp với CreateAdministrativeReportController để tạo báo cáo và AdministrativeReport để lưu hoặc hủy báo cáo.
+    CreateAdministrativeReportController thực hiện logic tạo báo cáo và trả về đối tượng báo cáo cho CreateAdministrativeReportForm.
+    AdministrativeReport lưu trữ nội dung và thực hiện các thao tác liên quan đến lưu trữ hoặc hủy bỏ báo cáo.
    #### - Biểu đồ lớp:
+   ![Diagram](https://www.planttext.com/api/plantuml/png/Z5DBJeL04DnpYbdgOYx0mZo3qPsBfnUOntHUEiu7UneIOZoP2u_a5Hm6y0r8H1PaqbDLtLq5Nn-VXy2AkBMc22_e1Fa0HL4R5OAe21J3hRReC30fnWwEq7ZYUqzMl1KYFfGAptq3fNXYGdTEvQHw5-cb6Dwf1awlAxOnlWTuL3QdIpdX6MXiM176Cwghwr9q7lNOeprPv15mXDSM0Y_kDOR6gFu17CJXGO_8fOIQLrepQqLhmlk-CPLtJDuOeCcUEa4lGbka1EoKGHsX-QOdxmqeTscynKwDf41T2dISplGpIxGmzrMSPoyMGSZj5EL6Yl9NYd8dnS7YV9dCttLvdcwQF3T-vrkCpMx-5SiVGbbsWzfcKeUuVVnNlW400F__0m00)
    
    ### 1.5.Maintain Employee Info:
    #### - Các lớp phân tích:
