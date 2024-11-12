@@ -107,11 +107,52 @@
    
    ### 1.3.Maintain Purchase Order:
    #### - Các lớp phân tích:
+    +) Boundary: MaintainPurchaseOrderForm
+    +) Control: MaintainPurchaseOrderController
+    +) Entity: PurchaseOrder, PurchaseOrderDatabase
    #### - Biểu đồ tuần tự:
+   ![Diagram](https://www.planttext.com/api/plantuml/png/x5RDQjj04BxlKymn0UK5V2Z1FssWlmSVtEDQ5f68j1AhLR6E9OTIIg4vzDIBJIWbWK2XXO94oK4cxx5Fq5VexCgrToFPSKgFDTYBTcU-cVdccvL_bTU7gQ1SP558qfE00OzJZr1Nn1m6KHB6kUS1JM50nd769fJdy9G6JE3tHSPTdwRUSpxn-CEOHyfEhSIDcU1ns6xPgmz3ZolxzHFnc0X43fPnwsQV2Zh61-NVxn8oW8C7Ed07UhuitpDmSRbmWIrEsJ7i3MKnZnteoU8g0URZ8XmOLT_eFj5fe_SwZGwCP7a5OVKJykeo0rSMNp8Ba10Q2j2WiFXmCsTmLCrm6_1Z5BVAwUKQHWTFGFZLTqnC8DsBCmNWhm2CMfurZFV2eBf4Qrc-WHE_chj-xUaWZ2pVKPtcMmTIMPmpID3_8dA07LUpV5-ZjvNx2CiDjgLarsHrehEa8PBbfs191gPI_126l-MX8FhT3Zov-PgPGRLblmi7pH1_J6VC1rSvjAEQDGqvCW2lPFaQekhyZefgjey2MPuoZ8D4tdQgwxCO7A3MCZp1ldvE6a685w8yQy7fDehxAkLs1cgNgT-LX3V8fQtUpMs_cntLh27FSfXcMAgmaXA-5oi8itaRsh2plbgwiTkucEDjkjJC2P_cUae-1hjFGeFkhQDW9V0Nis0dU9zPQ6DmXDT3dOnTX-rT2rNTXVz6e5D4-YzC-vumI9iQJMcZQjHslfcat4HUMc-LgD7etQIf7RReKP_lfCTXpTMuKc_DC-pkjE7giGaX1d6FPN6jzLguQZnY44WFEKGp_BVo6m00__y30000)
    #### - Thuộc tính và phương thức của các lớp:
+    MaintainPurchaseOrderForm: (Boundary)
+      - Thuộc tính:
+        customerContact: String
+        customerAddress: String
+        productList: List<Product>
+        orderDate: Date
+      - Phương thức:
+        getInputData(): PurchaseOrder
+        displayOrderDetails(order: PurchaseOrder)
+        confirmDeletion(): Boolean
+    MaintainPurchaseOrderController: (Controller)
+      - Phương thức:
+        createOrder(order: PurchaseOrder)
+        updateOrder(orderID: String, updatedOrder: PurchaseOrder)
+        deleteOrder(orderID: String)
+        getOrder(orderID: String): PurchaseOrder
+    PurchaseOrder: (Entity)
+      - Thuộc tính:
+        orderID: String
+        customerContact: String
+        customerAddress: String
+        productList: List<Product>
+        orderDate: Date
+        commissionedEmployeeID: String
+        status: String (Open/Closed)
+      - Phương thức:
+        isOrderOpen(): Boolean
+        belongsToEmployee(employeeID: String): Boolean
+    PurchaseOrderDatabase
+      - Phương thức:
+        saveOrder(order: PurchaseOrder)
+        updateOrder(order: PurchaseOrder)
+        deleteOrder(orderID: String)
+        findOrder(orderID: String): PurchaseOrder
    #### - Mối quan hệ giữa các lớp phân tích:
+    PurchaseOrderController điều khiển các thao tác nghiệp vụ liên quan đến PurchaseOrder và tương tác với PurchaseOrderDatabase để lưu trữ thông tin.
+    PurchaseOrder có Product (thể hiện mối quan hệ chứa nhiều - aggregation).
+    MaintainPurchaseOrderForm tương tác với PurchaseOrderController để gửi yêu cầu.
    #### - Biểu đồ lớp:
-   
+   ![Diagram](https://www.planttext.com/api/plantuml/png/n5HHJiCm3FtlAVAvIUm24ve65AH9e4s22sIDDoAIkB8Jf0bnCZuu4bSWwRf1IXcm7oerKcs_P_lPwTlBwvIz91-iAVX1Eq7888gYCf9Pt4ZjV7mNWQfxoJ0d1NI5PCLJ8U8p4bLWZnRe0cDWvSVYrfDswuxtJ2a2vewt9bIXyjUQ8owTfukjPT86O4fNIWzZaSx6AiGQ_CpLmKUJ70p78YkkZL6QQoCtZQc4s8BXGSFM2H-syHMwbIPRWW6lqINQSqG3qXNF1yL8VHCQ0zHA4ha8Oh6Dzs3EKAiyRbRk13ffdMf-0AzIiVtuuOTK_VwkQlicC_D-oXtuVyq-agArcZcE2DIbhGrk0BxK5HVQXpoX49gRbkOrPDFTEfTWqAtv3dUS0_X2thSIcLff7vVnOxy8B1-FMOFZnxtIJlrstjzVxT5eyjEkzwC_tON4aMVyCs8dPp45f-BlwHq00F__0m00)
    ### 1.4.Create Administrative Report:
    #### - Các lớp phân tích:
    #### - Biểu đồ tuần tự:
