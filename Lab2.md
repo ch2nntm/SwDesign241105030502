@@ -308,7 +308,36 @@
    
  ## 2.Viết code Java mô phỏng ca sử dụng Maintain Timecard:
 ```
-public class EmployeeEntity {}
+public class EmployeeEntity {
+  private int employeeId;
+  private String employeeName
+  private String address
+  private String paymentClassification
+  private float baseSalary
+  private float commissionRate 
+  private float hourlyRate
+}
+public class TimeCard {
+  private int timecardId
+  private int employeeId
+  private int projectChargeNumber
+  private float hoursWorked
+  private float overtimeHours
+}
+public class TimeCardController {}
+public class TimeCardForm {
+  private int timecardId
+  private Date entryDate
+  private float hoursWorked
+}
+public class ProjectManagementDatabase {
+  private int databaseId
+  private String chargeNumber
+}
+public class ProjectManagement {
+  private int projectId
+  private String projectName
+}
 ```
 
 
