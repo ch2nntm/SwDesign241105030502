@@ -6,7 +6,7 @@
    +) Boundary: CreateEmployeeForm, SaveForm
    +) Control: CreateEmployeeController
    #### - Biểu đồ tuần tự:
-     ![Diagram](https://www.planttext.com/api/plantuml/png/X5J1RjD04BtlLyonbU07Sa0LRaAb9bKbzm37pSR4flQwsEj8lXLnu50Xb0C792eI8eHK4L442Cbxw66Z_iVs1_W5PktOJfm0FbZMp7kpyzxC-hUysOi5ZKGI-2G-zJX4OUmGoaGOGJiuyyFKSO36q2RzCE436gLWHGuLJfdiX55W05QxKqDiEgeITeUma8iez1jCguZwJbJmBU9muOdc0KMI3AYWVHexS1o5pnmcUfJJeHCWPR_C8F2ujqz86-u_CFsqeAVb1tXg6X4wcuRGL_XY-DhP9GWmk7OBdgYh19ZEFYV0NPtDpq1uUSXLypLANVXe0xVZXtY4L-Fl0H-gIGfzdNqLi1YR-cNiL6St0eIhChPB2FK5F2nfS7V-_aJBjtm8Gq_BI_3L980HVhvYU588WPRl10oq_0Pgok_EBmdWirI3BhRWaPPp3z9QbQ-pJoa4QbRHK4p1iWmBNMj1jm8nzHrYdVqiKPYkQfz4Efl1ICiNCA3SXLXDcVkFqhbR1zZzIuvwjRpu3wsss4BqQzx4E7n0oAROlmoiQW8RNry0oBFRP6tbDqNKTSn8ZbpraUECr9LfCPzdz_OwgL6rDBkpjc_-6cpfWLqkPhbbM1T6QcBwkm0HeKZ3MtNCb7sCdXOBRBfKFt2315xe5QYzOTjMs8fhtTLeHQwNTJ76yIp6jzTQpjYM6dRJkEM9kUHSF0Ock13CXCryVRp8XmN8t_HmfRM3HCjVUBlacyPQOEwmlb_mF4cDPr-uI_OGXZ-wFm000F__0m00)
+     
    #### - Thuộc tính và phương thức của các lớp:
      CreateEmployeeForm:(Boundary)
       - Thuộc tính:
@@ -53,7 +53,7 @@
      EmployeeReportController tạo báo cáo bằng cách sử dụng EmployeeReport và có thể truy xuất mã dự án từ ProjectManagementDatabase.
      EmployeeReport chịu trách nhiệm tạo nội dung báo cáo, lưu file, hoặc hủy bỏ báo cáo.
    #### - Biểu đồ lớp:
-  
+   ![Diagram](https://www.planttext.com/api/plantuml/png/f9DDRi8m48NtEOMNxO8BiAYe0aX8XLQ52qoS8RZrJpGsIAZgoRheaNg5Zd63afIm8GjBUIz-_cR6-VdwdlW05FP6P_vTMK7EOvP93TwBd102paojtH5nxiY8ZqpmCoAi7ONDiSQnM0TIjafwWPMoKzuq5d5D8jgo9uaAm-if8YSLa1JStIUZLBxMS4pcSnsKixxdpOWSBT5xg92jpuPs3OSEe-Vt5PWUOLIVd8IOt754JSxKWHDYq1G3A7q-MZgxLMIYqwE9qdel9VDSOEfsC7SsaDCQwOzHo9EVgcs28s5NsO4jDIwLzmoxi5ikyiJV-0VGgkISLZC72BhpMqp7GjcG92une0tTRjquvv7S0LMusfi2gTlj2YrIP4x7jelVkBdIxJvBeB9TqmkvDvHX2PRRRNWt7mW5-AQyUBqU3pm_A3JcBGIVKYxSwz73uAoomI7-stJrqq7gx7nphr5CkBtyb_u2003__mC0)
    ### 1.2.Login:
    ### 1.3.Maintain Purchase Order:
    ### 1.4.Create Administrative Report:
