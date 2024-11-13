@@ -395,7 +395,7 @@ public class ProjectManagement {
 }
 public class Main {
    public static void main(String[] args) {
-     EmployeeEntity employee = new EmployeeEntity(1, "Nguyen Van A", "123 ABC Street");
+     EmployeeEntity employee = new EmployeeEntity(1, "Nguyen Le Ai", "Thanh pho Ho Chi Minh");
      TimeCardController controller = new TimeCardController();
      TimeCardForm form = new TimeCardForm(controller);
      form.submitTimeCard(employee);
