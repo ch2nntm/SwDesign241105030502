@@ -310,49 +310,98 @@
 ```
 public class EmployeeEntity {
   private int employeeId;
-  private String employeeName
-  private String address
-  private String paymentClassification
-  private float baseSalary
-  private float commissionRate 
-  private float hourlyRate
-  public int getEmployeeId() {}
-  public void addTimeCard(TimeCard timeCard) {}
-  public void updateTimeCard(TimeCard timeCard) {}
+  private String employeeName;
+  private String address;
+  private String paymentClassification;
+  private float baseSalary;
+  private float commissionRate;
+  private float hourlyRate;
+  public void addTimeCard(TimeCard timeCard) {
+    System.out.println("Thêm bảng chấm công cho nhân viên: " + employeeName);
+  }
+  public void updateTimeCard(TimeCard timeCard) {
+    System.out.println("Cập nhật bảng chấm công cho nhân viên: " + employeeName);
+  }
 }
 public class TimeCard {
-  private int timecardId
-  private int employeeId
-  private int projectChargeNumber
-  private float hoursWorked
-  private float overtimeHours
-  public void recordHoursWorked() {}
-  public void associateWithProject(int projectChargeNumber) {}
+  private int timecardId;
+  private int employeeId;
+  private int projectChargeNumber;
+  private float hoursWorked;
+  private float overtimeHours;
+  public TimeCard(int timecardId, int employeeId, float hoursWorked) {
+    this.timecardId = timecardId;
+    this.employeeId = employeeId;
+    this.hoursWorked = hoursWorked;
+  }
+  public void recordHoursWorked() {
+    System.out.println("Ghi nhận số giờ làm việc: " + hoursWorked);
+  }
+  public void associateWithProject(int projectChargeNumber) {
+    System.out.println("Liên kết với dự án số: " + projectChargeNumber);
+  }
 }
 public class TimeCardController {
-  public void processTimeCard(TimeCard timeCard) {}
+  public TimeCardController(){}
+  public void processTimeCard(TimeCard timeCard) {
+    timeCard.recordHoursWorked();
+    System.out.println("Xử lý bảng chấm công...");
+  }
   public void getTimeCardData(TimeCard timeCard) {}
-  public void updateProjectInfo(TimeCard timeCard, int projectNumber) {}
+  public void updateProjectInfo(TimeCard timeCard, int projectNumber) {
+    timeCard.associateWithProject(projectNumber);
+    System.out.println("Cập nhật thông tin dự án...");
+  }
 }
 public class TimeCardForm {
-  private int timecardId
-  private Date entryDate
-  private float hoursWorked
-  public TimeCardForm(TimeCardController controller) {}
-  public void displayTimeCard(TimeCard timeCard) {}
-  public void submitTimeCard(TimeCard timeCard) {}
+  private int timecardId;
+  private Date entryDate;
+  private float hoursWorked;
+  public TimeCardForm(TimeCardController controller) {
+    this.controller = controller;
+  }
+  public void displayTimeCard(TimeCard timeCard) {
+    System.out.println("Bảng chấm công ID: " + timeCard.getTimecardId());
+    System.out.println("Nhân viên ID: " + timeCard.getEmployeeId());
+    System.out.println("Số giờ đã làm việc: " + timeCard.getHoursWorked());
+  }
+  public void submitTimeCard(TimeCard timeCard) {
+    System.out.print("Nhập số giờ đã làm việc: ");
+    float hoursWorked = scanner.nextFloat();
+    System.out.print("Nhập mã dự án: ");
+    int projectNumber = scanner.nextInt();
+    TimeCard newTimeCard = new TimeCard(1002, employee.getEmployeeId(), hoursWorked);
+    controller.processTimeCard(newTimeCard);
+    controller.updateProjectInfo(newTimeCard, projectNumber);
+    System.out.println("Bảng chấm công đã được gửi.");
+  }
 }
 public class ProjectManagementDatabase {
   private int databaseId
   private String chargeNumber
-  public void retrieveProjectData(int projectChargeNumber) {}
+  public void retrieveProjectData(int projectChargeNumber) {
+    System.out.println("Lấy dữ liệu cho dự án số: " + projectChargeNumber);
+  }
 }
 public class ProjectManagement {
   private int projectId
   private String projectName
-  public void assignEmployee(EmployeeEntity employee) {}
-  public void getProjectStatus() {}
+  public void assignEmployee(EmployeeEntity employee) {
+    System.out.println("Phân công nhân viên: " + employee.getEmployeeName());
+  }
+  public void getProjectStatus() {
+    System.out.println("Trạng thái dự án: Đang hoạt động");
+  }
 }
+public class Main {
+   public static void main(String[] args) {
+     EmployeeEntity employee = new EmployeeEntity(1, "Nguyen Van A", "123 ABC Street");
+     TimeCardController controller = new TimeCardController();
+     TimeCardForm form = new TimeCardForm(controller);
+     form.submitTimeCard(employee);
+    }
+}
+
 ```
 
 
