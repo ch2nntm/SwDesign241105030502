@@ -316,6 +316,9 @@ public class EmployeeEntity {
   private float baseSalary
   private float commissionRate 
   private float hourlyRate
+  public int getEmployeeId() {}
+  public void addTimeCard(TimeCard timeCard) {}
+  public void updateTimeCard(TimeCard timeCard) {}
 }
 public class TimeCard {
   private int timecardId
@@ -323,20 +326,32 @@ public class TimeCard {
   private int projectChargeNumber
   private float hoursWorked
   private float overtimeHours
+  public void recordHoursWorked() {}
+  public void associateWithProject(int projectChargeNumber) {}
 }
-public class TimeCardController {}
+public class TimeCardController {
+  public void processTimeCard(TimeCard timeCard) {}
+  public void getTimeCardData(TimeCard timeCard) {}
+  public void updateProjectInfo(TimeCard timeCard, int projectNumber) {}
+}
 public class TimeCardForm {
   private int timecardId
   private Date entryDate
   private float hoursWorked
+  public TimeCardForm(TimeCardController controller) {}
+  public void displayTimeCard(TimeCard timeCard) {}
+  public void submitTimeCard(TimeCard timeCard) {}
 }
 public class ProjectManagementDatabase {
   private int databaseId
   private String chargeNumber
+  public void retrieveProjectData(int projectChargeNumber) {}
 }
 public class ProjectManagement {
   private int projectId
   private String projectName
+  public void assignEmployee(EmployeeEntity employee) {}
+  public void getProjectStatus() {}
 }
 ```
 
