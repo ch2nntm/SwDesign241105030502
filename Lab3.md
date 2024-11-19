@@ -1,1 +1,4 @@
-
+# Kết quả Lab 3: Identify design elements
+## 1.Subsystem context diagrams:
+### 1.1 BankSystem:
+![Diagram](https://www.planttext.com/api/plantuml/png/h58zJyCm4DtzAqwPYaHQMACggc3gXjILvN2kO2Mn8vzJ4K5_6GC_YRz0x7pG9B3XuNpslNllwUolZyyTExIkBWl1kT9W3LF8AhHO0hkce3PQ9GD6L2XpV2Q87h2nfYZWqB2ZCe8t0UqAGHR833tWtcZdTxAmtShkaAOztA_DnjQw1w-kmlLPX4rfH_Q8ac1_Xphlb5gMyJvDVsWogWmhjyAMIhwGp1COiclFP3n50ZxkzT7O4fqoUg8t-WvThH1ffrmpkft0PaH_GKRJN3znbrVMl3QJ4Vo3z-Mqevlr-ZQ2E4uduqiWofGbwGPLXY34S5Bug4DJOBpeyHo3eTzgCsC1CdcozpY-w5dK5_ppubn0dCMETEP_v3S0003__mC0)
