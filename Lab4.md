@@ -21,3 +21,24 @@
 | **CreateAdministrativeReportController** | CreateAdministrativeReportController  | AdministrativeReportService             |
 | **MaintainEmployeeInfoForm**   | MaintainEmployeeInfoForm  |                                                               |
 | **MaintainEmployeeInfoController** | MaintainEmployeeInfoController      | EmployeeService                                 |
+
+
+
+
+
+
+| **Design Element**             | **Owning Package**             |
+|--------------------------------|--------------------------------|
+| **LoginForm**                  | ui::login                      |
+| **PayrollForm**                | ui::payroll                    |
+| **EmployeeForm**               | ui::employee                   |
+| **ReportForm**                 | ui::report                     |
+| **LoginController**            | application::login             |
+| **PayrollController**          | application::payroll           |
+| **EmployeeController**         | application::employee          |
+| **ReportController**           | application::report            |
+| **EmployeeService**            | business services::employee    |
+| **PayrollService**             | business services::payroll     |
+| **ReportService**              | business services::report      |
+| **SecurityFilter**             | middleware::security           |
+| **AuthenticationManager**      | middleware::security           |
