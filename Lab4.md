@@ -1,10 +1,10 @@
 | **Analysis Class**            | **Design Element (Application Layer)**                               | **Design Element (Business Services Layer)**                        |
 |-------------------------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
-| **LoginForm**                  | LoginForm (UI Component)                                            | -                                                                   |
-| **LoginController**            | LoginController (Controller for User Authentication)               | UserService (Handles user authentication)                           |
-| **TimecardForm**               | TimecardForm (UI Component)                                         | -                                                                   |
+| **LoginForm**                  | LoginForm                                            |                                                                  |
+| **LoginController**            | LoginController              | UserService (Handles user authentication)                           |
+| **TimecardForm**               | TimecardForm (UI Component)                                         |                                                                  |
 | **TimecardController**         | TimecardController (Controller for Timecard Process)               | TimecardService (Handles timecard processing logic)                 |
-| **PayrollForm**                | PayrollForm (UI Component)                                          | -                                                                   |
+| **PayrollForm**                | PayrollForm (UI Component)                                          |                                                                   |
 | **PayrollController**          | PayrollController (Controller for Payroll Process)                 | PayrollService (Handles payroll processing logic)                    |
 | **PrinterForm**                | PrinterForm (UI Component for Printing Paychecks)                   | -                                                                   |
 | **PrinterController**          | PrinterController (Controller for Printing Paychecks)              | PrinterService (Handles printing logic for paychecks)                |
