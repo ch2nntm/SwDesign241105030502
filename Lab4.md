@@ -33,6 +33,10 @@
   + Quản trị viên duyệt yêu cầu nghỉ phép
       Người quản trị hệ thống xem xét yêu cầu nghỉ phép.
       Người quản trị hệ thống có thể phê duyệt hoặc từ chối yêu cầu nghỉ phép của nhân viên.
+- Hợp nhất các hệ thống con
+  + TimeCard sẽ tương tác trực tiếp với ProjectManagementDatabase để lưu trữ thông tin về thời gian làm việc của nhân viên. 
+  + TimeCard cũng cần liên kết với Employee để lấy thông tin về nhân viên.
+  + TimeCard có thể tích hợp với hệ thống quản lý nghỉ phép để xử lý các yêu cầu nghỉ phép của nhân viên. Khi một nhân viên gửi yêu cầu nghỉ phép, TimeCard sẽ cập nhật trạng thái của thẻ chấm công liên quan.
 
 ### 1.2 Ca sử dụng: RunPayroll
 - Tác nhân
@@ -67,7 +71,7 @@
   + PayrollController gửi lệnh thanh toán đến IBankSystem.
   + IBankSystem gọi BankSystem để thực hiện giao dịch gửi tiền vào tài khoản nhân viên.
   + BankSystem trả về thông báo giao dịch thành công.
-- Tích hợp các hệ thống con
+- Hợp nhất các hệ thống con
   + TimeCard liên kết với hệ thống quản lý nhân viên để lấy thông tin ID nhân viên.
   + TimeCard tích hợp với hệ thống quản lý nghỉ phép để xử lý các yêu cầu nghỉ.
   + PayrollController tích hợp với TimeCard để lấy dữ liệu giờ làm việc.
