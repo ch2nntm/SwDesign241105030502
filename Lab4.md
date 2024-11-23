@@ -72,10 +72,10 @@
   + IBankSystem gọi BankSystem để thực hiện giao dịch gửi tiền vào tài khoản nhân viên.
   + BankSystem trả về thông báo giao dịch thành công.
 - Hợp nhất các hệ thống con
-  + TimeCard liên kết với hệ thống quản lý nhân viên để lấy thông tin ID nhân viên.
-  + TimeCard tích hợp với hệ thống quản lý nghỉ phép để xử lý các yêu cầu nghỉ.
-  + PayrollController tích hợp với TimeCard để lấy dữ liệu giờ làm việc.
-  + PayrollController tích hợp với hệ thống ngân hàng để gửi lương cho nhân viên.
+  + PayrollController liên kết với Employee để lấy thông tin về nhân viên.
+  + PayrollController liên kết với TimeCard để lấy dữ liệu giờ làm việc của nhân viên, nếu cần tính toán lương theo số giờ làm việc.
+  + IBankSystem và BankSystem thực hiện giao dịch thanh toán, sau đó trả lại thông báo về trạng thái giao dịch.
+
 
 
 
