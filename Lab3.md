@@ -1,10 +1,60 @@
 # Kết quả Lab 3: Identify design elements
-## 1.Subsystem context diagrams:
+## 1.Subsystem context diagrams
 ### 1.1 BankSystem:
-![Diagram](https://www.planttext.com/api/plantuml/png/h5AnJiCm4Dtp5QTCHI8jh55bLJ1rG-hAOfohi9ASAv-36W5Vni0dyGlOBWbr0biz-EoxT-yzdVtryRbX9wthsYRZMXDOmvY1Nt5JZMI61zbRqpJtXbo8Q66zLgUB4F0QaM6jLhQZ7_3YAgRVinWqERHxgH2sTvBgNSyEMyyoveNufQdmO5YxXVHKwXbLNS9mkWvC9b2K4FOjxOrjfTE64htHT-poGaXEktvqcy0cHFz1HjFSFV7fVB3cs2SZk83t-RJpc-NoDeUY4CduIiWhRL6vGPKX2Z6yQFb8iIaodlK4Zi7GNxM9iGX9dkojACvwPlKP_xGu5SWsI9N_VTy0003__mC0)
+
+![Diagram](https://www.planttext.com/api/plantuml/png/j991JiCm44NtFiMegoAHTb-XghImgCG2AISOt2bOSUp8urH4q9Enu4XS0JjAI9oiySRssF_Fcx5_lhvtxD7vkjI22sN0MIOXAfG5lX8ixgjAAubUMGDFs91Rm8U0CAH6PdZ6nbcj3zRuE9FhJkDOhrrjkWlBcpPy5TUHzxvcPIYuvEGkIXAd6PJnvCue2OvxD4NUiASoyJzHPLdv9OOiyera0HlebxTHRwCm1EDqD6VhohQI7cQeOqZGiO0gAqqb6S_Zz2d_G9NNBzokqlRy4tU0263ADt-gVZyH235_e2pR9WtTm8Do93rqL71HACONxZwpRDuWCMzPT4wC7zz9rfvwvv44Lglj03-9JulOaJd5__aB003__mC0)
 
 ### 1.2 PrintService:
-![Diagram](https://www.planttext.com/api/plantuml/png/d54x3i8m3Drp2giJI9JFMbKH4XCR4YjB20OgsWGvAQ82JiR0aRW2QIX50IOyn7RozFpySh_UniOAicMHCxFB590soC25FsGkZ86Pg4Zd-KGhMsSaI5FvR3Y7aqVMCHXGgHfmf-klByodJ5cajP08qncvPevqo5oNfkqBvs-YVOtf24SbjoXt2Rog7cZb2P0Ic5jNRO8vhLwFTlIeR6QhLcK82vMOScagOx5mu_Mn2ZRxMz2tTT6mtnz54CVymui48jWtj0tbGdcmP_emxXp7mG8_CFM8bqx6s1ZLodtp0m00__y30000)
+![Diagram](https://www.planttext.com/api/plantuml/png/b58nJWCn4EpzYbMgK5pIHoWAe1H8515vWJ5BPCLdczqruWHv6GLFuWlOTnVf72gsiRqpdXcl_FFrlM7H9AbrYe_M0mL6fQ8sHtr0cDt4wApHOeE71zqXpU13GIxZD3FiT4V1kRlWfQn88rfgkQJaHyBygc-Vr6cYVPlOUimgUwGtQv1h1-i5wKKRXFiTvSF8gXnY0UPnC7d464XW1SFcR3b9EvMnRNJOeXUkzQk8rOrzUkAE1TkB6VIS7lXtjkoL4rZfnhvIVoVQDEkB2HILruGiq7jOVr0ruVgpQQhNgWekYjFKAzY-eqc2WvwQOel5-fnjW_uv_vDV0000__y30000)
 
 ### 1.3 ProjectManagementDatabase:
-![Diagram](https://www.planttext.com/api/plantuml/png/h5BBJiCm4BpdAwoSsaDTk4PLL2bSa00XbIENZRC4Gs9Nksj41NmP1pw9No0FDT2eX0jxisR6Cplsv_l7cWL8Gbr5_6YT8iyOHP5gnbJ0h6viZGQeoBmJybM5f5Ohqn_ILBrqr7QMon8b2qJeP2-QpKVmFL29cI-G3w2mBK3mg8hXQGoyzVci4wGxCAZEhya_e95BS51YtGGu0u4S69ki0orDlyCEMQv2dIFnp91jQ1OIjH6ohfmdokm95vRbft5Vp9GdXvntB5YhBVddtK5F_s2T7S0TSEIPuXEjJsErMAHJ1IKg7jmsFf31MzS9kskdcdtL-lSI_b9hdOxMQ0MJ_D7MqHfTqVxRBm000F__0m00)
+![Diagram](https://www.planttext.com/api/plantuml/png/h5BDJiCm3BxdAQoTjaEtUuMc0HFI990c-WHUPafOcfROHQfWJyQ1H-8LIBOUMgPmmfT4zlTZE_d-_5gne9UsieeFne6lcPHgK1-m99XSDuqr6iNK3kwn8p-1TmKXj4Lcs6BdQsjlQoVn9DzNOomMldKzO3exfO_gED2-QTau2Ye5-JUZYSSEnWdv9zG4cwslNqZB0xf0hCX9pnYvbIGzRes2KweQMtT4cpNaK8Wthfo5sm3IjpIO9cLZWjOfmUbUHgDTWABV3fcWQ7VSiL3rQv59md-C65eBaaQwKKrTlbwMBV_OTWwFzDeI2pHd2EoZJffmzP5boQsg92rsaLv83dSa-ldidORDvylHj2jo-_ZBVm000F__0m00)
+
+
+## 2.Analysis class to design element map:
+| **Analysis Class**            | **Design Element (Application Layer)**   | **Design Element (Business Services Layer)**    |
+|-------------------------------|------------------------------------------|-------------------------------------------------|
+| **LoginForm**                 | LoginForm                                |                                                 |
+| **LoginController**           | LoginController                          | UserService                                     |
+| **TimecardForm**              | TimecardForm                             |                                                 |
+| **TimecardController**        | TimecardController                       | TimecardService                                 |
+| **PayrollForm**               | PayrollForm                              |                                                 |
+| **PayrollController**         | PayrollController                        | PayrollService                                  |
+| **PrinterForm**               | PrinterForm                              |                                                 |
+| **PrinterController**         | PrinterController                        | PrinterService                                  |
+| **BankSystemForm**            | BankSystemForm                           |                                                 |
+| **BankSystemController**      | BankSystemController                     | BankTransactionService                          |
+| **EmployeeEntity**            | EmployeeEntity                           | EmployeeService                                 |
+| **Paycheck**                  | Paycheck                                 | PaycheckService                                 |
+| **CreateEmployeeForm**        | CreateEmployeeForm                       |                                                 |
+| **CreateEmployeeController**  | CreateEmployeeController                 | EmployeeService                                 |
+| **SaveForm**                  | SaveForm                                 |                                                 |
+| **MaintainPurchaseOrderForm** | MaintainPurchaseOrderForm                |                                                 |
+| **MaintainPurchaseOrderController** | MaintainPurchaseOrderController    | PurchaseOrderService                            |
+| **CreateAdministrativeReportForm** | CreateAdministrativeReportForm      |                                                 |
+| **CreateAdministrativeReportController** | CreateAdministrativeReportController  | AdministrativeReportService             |
+| **MaintainEmployeeInfoForm**   | MaintainEmployeeInfoForm  |                                                               |
+| **MaintainEmployeeInfoController** | MaintainEmployeeInfoController      | EmployeeService                                 |
+
+
+## 3.Design element to owning package map
+| **Design Element**             | **Owning Package**             |
+|--------------------------------|--------------------------------|
+| **LoginForm**                  | ui::login                      |
+| **PayrollForm**                | ui::payroll                    |
+| **EmployeeForm**               | ui::employee                   |
+| **ReportForm**                 | ui::report                     |
+| **LoginController**            | application::login             |
+| **PayrollController**          | application::payroll           |
+| **EmployeeController**         | application::employee          |
+| **ReportController**           | application::report            |
+| **EmployeeService**            | business services::employee    |
+| **PayrollService**             | business services::payroll     |
+| **ReportService**              | business services::report      |
+| **SecurityFilter**             | middleware::security           |
+| **AuthenticationManager**      | middleware::security           |
+
+
+
+## 4. Architectural layers and their dependencies
+![Diagram](https://www.planttext.com/api/plantuml/png/X9H1JiCm44NtSugHDwnwWoggX6350i49J1aLguudiWqeGfoC1KVY2ZID6yTnNEzV_d_A7_dlvtVdlBJ-lTNWZigWPKS0dTmVvO7mWG_AtBDjSRlLiYVRD8XVy1s9HzbRrdgDkI1tRQUv9xh6F577rbzjEhlSil537zbIKX2gWnUjEZdAbRaiyfdiXzfJHR52ZQq5AAiSQASysxxIMWV7uZ87S7DYjFIAZNjJdSCNyfz41i-O0p6TZS3Dfa6nc4uWYDdT12WRJe2Odqx0yjc6k7W_0LjkTe8WzqWImwyMiAAIA4PmJQQGcGlDF2SCiY_JlBXAr4p9REQfE-MMAmlOaNaTte5_0000__y30000)
