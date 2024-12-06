@@ -11,6 +11,7 @@
 
 ## 1. Use case Run Payroll:
 ### 1.1 Xác định các lớp và các operations:
+![Diagram](https://www.planttext.com/api/plantuml/png/X5LBRjim4Dth5DpL0TeB24MGflcWG1e4TNg02JMn2LEaGb96ZQBhhhlkgYVe0RpeeYVn2Ng53ccAecGPtjWovytZqvkF_st_N5W7nhMrBEnAA6QqnQBW4gnb3x0nMihtMZd_ZOPzBHWphOg1sLd9rbfK_X2T4RZ6wxgHUeDeRxGXr1KuzAWxOTtRBdPE-0KgD1ICJ9-mqSPbV1maR-KUCCEOMBAEWe2U7Hq8QGdU6CtHMZghKRbPas8vhcTVWgeaNe9QpJVMOVrPmPeGy2Gnqr2XH9VUQ5f5W7xh3Ei2SpHhmJ7OjK3N7KSTYUb3LR8v-QOMPptfC2MpiQAFald7AKDpmq9jJfcMHFSs1BtHoaS3oW9tGgkPwv_B0C-2H7gfjKHGbBj68vut7l6ESzrI9IPLT0a32Hbdq95Tslj4vr1xufBTI0tE_zxVTD_MJsWoN9QVUY45oU77WxWlVKBW5-Ijmzo6AUMzeK5qNbcXlBm53PJlorvmXLKR26r_fj0DCAJlDYRwQxFZgvGz2jm7Ylumb-Y78kz9eOGJ-ru9yt9OfTViw0oDYkLxJwjdOUgExKIxnEbgo6Ylc2-HhqvEB3T8UaTa9x8Enl98YHJKc5NUWWGphCLroXdq24Nc0JmgHJu0FPxal68VTziVWhsqeDXoj_tE5cAt_GsC__t5cTnjVpR5uT9zSpvUB2LhBTfYl6uoO9asyYJi8JCkRGuxVVUmV-BLewOYsAWsPMgoO-3zpebysHAQuefBAGBpLJ5uvnfMQ7td-kkOqyK5gih_jVq7003__mC0)
 ### 1.2 Xác định các thuộc tính:
 ### 1.3 Xác định các mối quan hệ và phụ thuộc:
 ### 1.4 Xác định các trạng thái chính:
